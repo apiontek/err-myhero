@@ -169,10 +169,10 @@ CONFIG_TEMPLATE = {
     }
 
 class MyHero(BotPlugin):
-    """Generates hero hunky names in the spirit of MST3k's running joke in their Space Mutiny episode"""
+    """Generates lunky hunky hero names in the spirit of MST3k's running joke in their Space Mutiny episode"""
     min_err_version = '3.0.0' # Optional, but recommended
 
-    HERO_NAMES_PREFIXES = ['Mc','von '],
+    HERO_NAMES_PREFIXES = ['Mc','von ']
 
     def get_configuration_template(self):
         return CONFIG_TEMPLATE
