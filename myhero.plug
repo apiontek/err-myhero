@@ -1,0 +1,9 @@
+[Core]
+name = MyHero
+module = myhero
+
+[Documentation]
+description = Generates hero hunky names in the spirit of MST3k's running joke in their Space Mutiny episode
+
+[Python]
+version = 3
