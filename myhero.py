@@ -205,7 +205,13 @@ class MyHero(BotPlugin):
         """Generates a special hunky hero name for you"""
         return self.get_hero_name()
 
-    @re_botcmd(pattern=r"space mutiny|hero", prefixed=False, flags=re.IGNORECASE)
+#    @re_botcmd(pattern=r"(^| )hero($| |\.)|(^| )heros($| |\.)|(^| )heroes($| |\.)", prefixed=False, flags=re.IGNORECASE)
+    @re_botcmd(pattern=r"(^| )(hero|heros|heroes)($| |\.|\!|\?)", prefixed=False, flags=re.IGNORECASE)
     def listen_for_talk_of_heroes(self, msg, match):
         """Talk of heroes prompts a Space Hero Name..."""
+        return self.get_hero_name()
+
+    @re_botcmd(pattern=r"space mutiny", prefixed=False, flags=re.IGNORECASE)
+    def listen_for_talk_of_mutiny(self, msg, match):
+        """Talk of mutiny prompts a Space Hero Name..."""
         return self.get_hero_name()
